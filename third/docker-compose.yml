@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: devops-third-go:latest
+    container_name: devops-third-app
+    environment:
+      - PORT=8080
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
