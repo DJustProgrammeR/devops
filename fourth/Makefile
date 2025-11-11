@@ -1,11 +1,11 @@
 build-system-image:
-	docker build -t devops-fourth-system-go:0.0.1 -f Dockerfile.system .
+	docker build -t devops-fourth-system-go:0.0.1 -f system.Dockerfile .
 
 build-build-image:
-	docker build -t devops-fourth-build-go:0.0.1 -f Dockerfile.build .
+	docker build -t devops-fourth-build-go:0.0.1 -f build.Dockerfile .
 
 build-run-image:
-	docker build -t devops-fourth-run-go:0.0.1 -f Dockerfile.run .
+	docker build -t devops-fourth-run-go:0.0.1 -f run.Dockerfile .
 
 run-app:
 	docker run devops-fourth-run-go:0.0.1
