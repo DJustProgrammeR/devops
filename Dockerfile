@@ -9,7 +9,7 @@ COPY . .
 
 RUN GOOS=linux GOARCH=arm64 go build -o main ./cmd
 
-FROM alpine:3.20
+FROM scratch:3.20
 
 WORKDIR /app
 
@@ -21,6 +21,6 @@ RUN adduser -D appuser \
 USER appuser
 
 ENV PORT=8080
-EXPOSE 8080
+EXPOSE PORT
 
 CMD ["./main"]
