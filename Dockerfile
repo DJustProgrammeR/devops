@@ -9,7 +9,7 @@ COPY . .
 
 RUN GOOS=linux GOARCH=arm64 go build -o main ./cmd
 
-FROM scratch:3.20
+FROM scratch
 
 WORKDIR /app
 
